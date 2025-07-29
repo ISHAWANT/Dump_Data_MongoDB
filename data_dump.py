@@ -2,11 +2,16 @@ import pymongo
 
 import pandas as pd 
 import json 
+from dotenv import load_dotenv 
+import os 
 
+load_dotenv() 
 
-clinet = pymongo.MongoClient("mongoDB_Atlas_url") 
+MONGO_DB_URL = os.getenv('MONGO_DB_URL')
 
-DATA_FILE_PATH = (r"C:\Users\ishaw\OneDrive\Desktop\insurance.csv")
+clinet = pymongo.MongoClient('MONGO_DB_URL') 
+
+DATA_FILE_PATH = (r"D:\Dump_Data_MongoDB\insurance.csv")
 
 DATABASE_NAME="INSURANCE" 
 COLLECTION_NAME = 'INSURANCE_PROJECT' 
