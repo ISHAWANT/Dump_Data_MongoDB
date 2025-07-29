@@ -9,7 +9,7 @@ load_dotenv()
 
 MONGO_DB_URL = os.getenv('MONGO_DB_URL')
 
-clinet = pymongo.MongoClient('MONGO_DB_URL') 
+clinet = pymongo.MongoClient(MONGO_DB_URL) 
 
 DATA_FILE_PATH = (r"D:\Dump_Data_MongoDB\insurance.csv")
 
